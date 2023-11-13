@@ -18,6 +18,10 @@ String? generate(Directory currentDir,
 
   void processFile(File file, List<String> pathSegments) {
     output += "export '${pathSegments.join('/')}';\n";
+    String dartCode = file.readAsStringSync();
+    RegExp pattern = RegExp(r'^\s*import.*;', multiLine: true);
+    String modifiedCode = dartCode.replaceAll(pattern, '');
+    file.writeAsStringSync(modifiedCode);
   }
 
   void processDirectory(Directory dir, List<String> pathSegments) {
