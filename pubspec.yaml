@@ -1,5 +1,5 @@
 name: export_generator
-description: A new Flutter package project.
+description: The export_generator package simplifies the process of exporting all files in a directory hierarchy by automatically creating an export configuration file. The primary purpose is to identify and remove individual imports, generating a single configuration file that exports everything within the specified directory.
 version: 0.0.1
 homepage: https://github.com/ameur24/export_generator
 environment:
